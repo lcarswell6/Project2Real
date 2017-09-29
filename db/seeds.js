@@ -1,9 +1,9 @@
 require('dotenv').config();
 
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 mongoose.connect(process.env.MONGODB_URI)
-const db = moongoose.connection;
+const db = mongoose.connection;
 
 
 db.on('error', (error) =>{
@@ -28,6 +28,15 @@ const adidas = new BrandModel({name: "Adidas", location:"Herzogenaurach, Germany
 const underArmour = new BrandModel({name: "Under Armour", location: "Baltimore, MD"})
 
 
-const companies = [nike, adidas, underArmour]
+const brands = [nike, adidas, underArmour]
 
+brands.forEach((brand) => {
+    brand.save()
+    .then((brand) => {
+        console.log(`${brand.name} saved`)
+    }) 
+    .catch((error) => {
+        console.log(error)
+    })
+})
 db.close();
