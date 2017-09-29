@@ -42,7 +42,7 @@ const usersController = require('./routes/users');
 app.use('/users', usersController);
 
 const brandController = require('./routes/brandController');
-app.use('/brand', brandController);
+app.use('/brands', brandController);
 
 
 
