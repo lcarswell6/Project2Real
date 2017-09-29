@@ -4,11 +4,12 @@ const Schema = mongoose.Schema;
 
 const BrandSchema = new Schema ({
     name: {
-        String,
+        type: String,
         required: true,
+        unique: true,
     },
     location: { 
-        String,
+        type: String,
         required: true,
     },
 });

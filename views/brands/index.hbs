@@ -1,0 +1,13 @@
+<div>
+
+    <h1>Major Brands Assocaited with Athletic Shoe Deals</h1>
+<h3>The Front Runners:</h3>
+{{#each brands}}
+<div>
+    {{this.name}} - {{this.country}}
+    <a href="brands/{{this._id}}">{{this.name}} Info</a>
+</div>
+
+
+{{/each}}
+</div>
