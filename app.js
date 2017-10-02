@@ -44,7 +44,8 @@ app.use('/users', usersController);
 const brandController = require('./routes/brandController');
 app.use('/brands', brandController);
 
-
+const playerController = require('./routes/playerController');
+app.use('/brands/:brandId/players', playerController)
 
 
 

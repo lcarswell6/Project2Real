@@ -6,7 +6,6 @@ const AthleteSchema = new Schema({
     name: {
         type: String,
         required: true,
-        unique: true,
     },
     sport: {
         type: String,
@@ -18,7 +17,6 @@ const AthleteSchema = new Schema({
     shoe: {
         type: String,
         required: true,
-        unique: true,
     },
     price: {
         type: Number,
@@ -31,8 +29,7 @@ const AthleteSchema = new Schema({
 const BrandSchema = new Schema({
     name: {
         type: String,
-        required: true,
-        unique: true,
+        required: true
     },
     location: {
         type: String,

@@ -42,9 +42,13 @@ const steph = new AthleteModel({name:"Stephen Curry", sport:"Basketball", team:"
 const theRock = new AthleteModel({name:"Dwayne 'The Rock' Johnson", sport:"Professional Wrestling/Being a General Bad Ass", team:"n/a", shoe:"UA Project Rock Delta", price:139.99})
 
 const brands = [nike, adidas, underArmour]
+
 const nikeAthletes = [lbj, kd, kyrie]
 const adidasAthletes = [harden, dRose, lillard]
 const uaAthletes = [cam, steph, theRock]
+
+
+
 
 brands.forEach((brand) => {
 
