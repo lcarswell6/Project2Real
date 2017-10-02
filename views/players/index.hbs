@@ -3,6 +3,7 @@
     {{#each brand.athletes}}
 <div>
     {{this.name}}
+    <a href="/brands/{{../brand._id}}/players/{{this._id}}">View</a>
 </div>
     {{/each }}
     <a href="/brands">Back to Brands</a>

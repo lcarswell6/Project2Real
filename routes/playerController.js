@@ -28,14 +28,14 @@ router.get('/:playerId', (request, response) => {
 
     BrandModel.findById(brandId)
     .then((brand) => {
-        const player  = brand.players.id(playerId)
+        const player  = brand.athletes.id(playerId)
         response.render('players/show', {
             player: player,
             brandId: brandId
         })
     })
     .catch((error) => {
-        console.log(error)
+        response.send(error)
     })
 })
 
