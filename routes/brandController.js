@@ -18,7 +18,35 @@ router.get('/', (request, response) => {
         })
 })
 
+//SHOW route
+router.get('/:brandId', (request, response) => {
+    const brandId = request.params.brandId
 
+    BrandModel.findById(brandId)
+        .then((brand) => {
+            response.render('brands/show', {
+                brand: brand
+            })
+        })
+        .catch((error) => {
+            console.log(error)
+
+        })
+
+})
+
+//DELETE route
+router.get('/:brandId/delete', (request, response) => {
+    const brandId = request.params.brandId
+
+    BrandModel.findByIdAndRemove(brandId)
+    .then(() => {
+        response.redirect('/brands')
+    })
+    .catch ((error) =>{
+        console.log(error)
+    })
+})
 
 
 
