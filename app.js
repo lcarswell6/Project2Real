@@ -7,6 +7,8 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const methodOverride = require('method-override')
+
 
 mongoose.Promise = global.Promise
 mongoose.connect(process.env.MONGODB_URI); 
@@ -20,6 +22,8 @@ db.once('open', () => {
 })
 
 const app = express();
+
+app.use(methodOverride('_method'))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

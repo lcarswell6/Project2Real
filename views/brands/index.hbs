@@ -3,6 +3,9 @@
     <h1>Major Brands Associated with Athletic Shoe Deals</h1>
     <h3>The Front Runners:</h3>
 
+    <div>
+        <a href="/brands/new">Add A New Brand</a>
+    </div>
     {{#each brands}}
     <div>
         {{this.name}} - {{this.location}}
@@ -10,7 +13,6 @@
         <a href="/brands/{{this._id}}/players">{{this.name}}'s Athletes</a>
     </div>
 
-    
+
     {{/each}}
-<div><a href="/brands/new">Add A New Brand</a></div>
 </div>
