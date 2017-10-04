@@ -1,17 +1,20 @@
 <h1>{{player.name}}</h1>
 
  <div>
-    {{player.sport}} - {{player.team}} - {{player.shoe}} - {{player.price}}
+    Sport: {{player.sport}} 
+    <br> Team: {{player.team}} 
+    <br> Shoe: {{player.shoe}}
+    <br> Price: ${{player.price}}
 </div>
 
 <div>
-    <a href="/brands/{{brandId}}/players/{{player._id}}/delete">DELETE PLAYER</a>
+    <a href="/brands/{{brandId}}/players/{{player._id}}/delete">Delete Player</a>
 </div>
 
 <div>
-<a href="/brands/{{brandId}}/players/{{player._id}}/edit">EDIT</a>
+<a href="/brands/{{brandId}}/players/{{player._id}}/edit">Edit</a>
 </div>
 
 <div>
-    <a href="/brands/{{brandId}}/players">back to players index</a>
+    <a href="/brands/{{brandId}}/players">Back to Players Index</a>
 </div>

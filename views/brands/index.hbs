@@ -1,18 +1,25 @@
 <div>
 
     <h1>Major Brands Associated with Athletic Shoe Deals</h1>
+
+
     <h3>The Front Runners:</h3>
 
+    <br> {{#each brands}}
     <div>
-        <a href="/brands/new">Add A New Brand</a>
+        {{this.name}}
     </div>
-    {{#each brands}}
     <div>
-        {{this.name}} - {{this.location}}
         <a href="/brands/{{this._id}}">{{this.name}} Info</a>
-        <a href="/brands/{{this._id}}/players">{{this.name}}'s Athletes</a>
+        <a href="/brands/{{this._id}}/players">{{this.name}} Athletes</a>
     </div>
+    <br>
+
+</div>
 
 
-    {{/each}}
+{{/each}}
+<div>
+    <a href="/brands/new">Add A New Brand</a>
+</div>
 </div>
