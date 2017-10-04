@@ -5,12 +5,14 @@
 
     <h3>The Front Runners:</h3>
 
-    <br> {{#each brands}}
+    <br> 
+    
+    {{#each brands}}
     <div>
-        {{this.name}}
+        {{this.name}} <a href="/brands/{{this._id}}"> info</a>
     </div>
     <div>
-        <a href="/brands/{{this._id}}">{{this.name}} Info</a>
+        
         <a href="/brands/{{this._id}}/players">{{this.name}} Athletes</a>
     </div>
     <br>

@@ -1,15 +1,19 @@
 <div>
-<h1>{{brand.name}} Athletes</h1>
+    <h1>{{brand.name}} Athletes</h1>
     {{#each brand.athletes}}
-<div>
-    {{this.name}}
-    <a href="/brands/{{../brand._id}}/players/{{this._id}}">View</a>
-</div>
+    <div>
+        {{this.name}}
+        <a href="/brands/{{../brand._id}}/players/{{this._id}}">View</a>
+    </div>
     {{/each }}
-    
+    <br>
     <div>
         <a href="/brands">Back to Brands</a>
         <br>
+    </div>
+    <br>
+    <div>
         <a href="/brands/{{brand._id}}/players/new">Add a Player</a>
-        </div>
+    </div>
+
 </div>
