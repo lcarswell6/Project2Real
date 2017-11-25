@@ -1,6 +1,6 @@
 # Project2Real
 
-wireframe: https://leonproject1wdi12.mybalsamiq.com/projects/project2wdi/grid
+wireframe: https://lcars.mybalsamiq.com/projects/project2wireframe/grid
 
 heroku: https://whispering-shore-70324.herokuapp.com/
 
