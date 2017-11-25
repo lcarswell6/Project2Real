@@ -2,6 +2,8 @@
     <a href="/">Home</a>
     <a href="/brands">Brands</a>
 </div>
+
+{{#each users}}
 <div>
-    <h1>{{user.name}}</h1>
+    {{this.name}} <a href="/users/{{this._id}}"></a>
 </div>

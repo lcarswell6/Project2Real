@@ -6,7 +6,6 @@ const BrandModel = Schema.BrandModel;
 
 //INDEX route 
 router.get('/', (request, response) => {
-
     BrandModel.find({})
         .then((brands) => {
             response.render('brands/index', {
@@ -95,18 +94,5 @@ router.get('/:brandId/delete', (request, response) => {
         console.log(error)
     })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = router;
