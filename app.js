@@ -42,8 +42,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 const indexController = require('./routes/indexController');
 app.use('/', indexController);
 
-const usersController = require('./routes/users');
-app.use('/users', usersController);
+const userController = require('./routes/userController');
+app.use('/users', userController);
 
 const brandController = require('./routes/brandController');
 app.use('/brands', brandController);

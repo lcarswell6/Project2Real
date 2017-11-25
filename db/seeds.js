@@ -18,11 +18,14 @@ const Schema = require("./schema.js")
 
 const BrandModel = Schema.BrandModel;
 const AthleteModel = Schema.AthleteModel;
+const UserModel = Schema.UserModel;
 
 BrandModel.remove({}, (error) => {
     console.log(error)
 });
-
+UserModel.remove({}, (error) => {
+    console.log(error)
+});
 
 const nike  = new BrandModel({name: 'NIKE', location: "Beaverton, OR"})
 const adidas = new BrandModel({name: "Adidas", location:"Herzogenaurach, Germany"})
@@ -40,6 +43,9 @@ const lillard = new AthleteModel({name:"Damian Lillard", sport:"Basketball", tea
 const cam = new AthleteModel({name:"Cam Newton", sport:"American Football", team:"Carolina Panthers", shoe:"UA CN1 MC", price: 159.99})
 const steph = new AthleteModel({name:"Stephen Curry", sport:"Basketball", team:"Golden State Warriors", shoe:"UA Curry 3ZERO", price: 99.99})
 const theRock = new AthleteModel({name:"Dwayne 'The Rock' Johnson", sport:"Professional Wrestling/Being a General Bad Ass", team:"n/a", shoe:"UA Project Rock Delta", price:139.99})
+
+const kanye = new UserModel({name: "Kanye West", favoriteBrand: "Adidas"})
+const dot = new UserModel({name: "Dot Ogburn", favoriteBrand: "Nike" })
 
 const brands = [nike, adidas, underArmour]
 
