@@ -2,8 +2,15 @@
     <a href="/">Home</a>
     <a href="/brands">Brands</a>
 </div>
-
-{{#each users}}
 <div>
-    {{this.name}} <a href="/users/{{this._id}}"></a>
+    <h1>USERS</h1>
+    {{#each users}}
+    <div>
+        <a href="/users/{{this._id}}">{{this.name}}</a>
+    </div>
+</div>
+{{/each}}
+<br/>
+<div>
+    <a href="/users/new">New User</a>
 </div>

@@ -1,0 +1,9 @@
+<form action="/users/{{user._id}}?_method=PUT" method="POST">
+    <label for="name">Name</label>
+    <input type="text" name="name" value="{{user.name}}">
+
+    <label for="favoriteBrand">Favorite Brand</label>
+    <input type="text" name="favoriteBrand" value="{{user.favoriteBrand}}">
+
+    <input type="submit" value="Edit">
+</form>

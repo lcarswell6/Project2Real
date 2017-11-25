@@ -48,6 +48,7 @@ const kanye = new UserModel({name: "Kanye West", favoriteBrand: "Adidas"})
 const dot = new UserModel({name: "Dot Ogburn", favoriteBrand: "Nike" })
 
 const brands = [nike, adidas, underArmour]
+const users = [kanye, dot]
 
 const nikeAthletes = [lbj, kd, kyrie]
 const adidasAthletes = [harden, dRose, lillard]
@@ -69,4 +70,16 @@ brands.forEach((brand) => {
         console.log(error)
     })
 })
+
+users.forEach((user) => {
+    user.save()
+    .then((user)=>{
+        console.log(`${user.name} saved`)
+    })
+    .catch((error) =>{
+        console.log(error)
+    })
+})
+
+
 db.close();
